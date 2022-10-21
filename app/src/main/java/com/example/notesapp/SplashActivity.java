@@ -16,6 +16,8 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+
+        //running a splash activity/ loading screen for a 1 second from the loading time
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -25,8 +27,6 @@ public class SplashActivity extends AppCompatActivity {
                 } else {
                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 }
-
-//                startActivity(new Intent(SplashActivity.this, CreateAccountActivity.class));
                 finish();
             }
         }, 1000);
